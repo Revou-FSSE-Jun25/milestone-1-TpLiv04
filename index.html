@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Lingkan Tanan, Full Stack Software Engineering student at RevoU." />
+  <meta name="author" content="Lingkan Tanan" />
+  <meta name="keywords" content="portfolio, Lingkan Tanan, Full Stack, RevoU, web developer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="images/favicon.ico" />
+  <title>It's Lingkan</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="toggle-mode">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME Section -->
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="Video/backgroundv.mp4" type="video/mp4" />
+    </video>
+
+    <section id="home" class="content">
+      <div class="intro-container" data-aos="fade-up">
+        <div class="intro-text">
+          <h1 class="h1">Hi! My Name is Lingkan</h1>
+          <p>
+            I'm currently studying in the Full Stack Software Engineering class at RevoU.
+            With increasingly sophisticated technological developments like social media and artificial intelligence,
+            I feel that the use of applications and AI has become something everyone should know about.
+            I hope that RevoU Full Stack Software Engineering will help me understand programming better and utilize AI more effectively.
+            <a href="#about" class="linkk">Find more about me..!</a>
+          </p>
+        </div>
+      </div>
+    </section>
+   <hr class="pembatas" />
+    <!-- ABOUT Section -->
+    <section id="about" class="content">
+      <div class="intro-container" data-aos="fade-up">
+        <h1 class="h1">About Me</h1>
+        <p class="justify">
+          My name is Lingkan Tanan.
+          <br>I graduated from a state vocational high school in 2014. During high school,
+          I worked on several blog projects using Adobe Dreamweaver as part of school assignments. After graduating, I worked as a waitress at Subasuka Restaurant, and currently work as a civil servant in
+          <span class="highlight"> East Nusa Tenggara</span> <br />
+          <br />
+          Want to chat more →<b><a href="#contact" class="linkk" style="color: rgba(154, 74, 163, 0.941);">Find Me here</a></b>
+        </p>
+      </div>
+    </section>
+
+    <hr class="pembatas" />
+
+    <!-- PROJECTS Section -->
+    <section id="projects" class="content">
+      <div class="intro-container" data-aos="fade-up">
+        <h1 class="h1">Projects</h1>
+        <p class="justify">
+          I have worked on several projects during my studies at RevoU.
+          These projects include web applications, mobile applications, and other software development tasks.
+          Each project has helped me improve my skills in programming, design, and problem-solving.
+        </p>
+      </div>
+      <div class="project-container">
+        <div class="project-card" data-aos="fade-up">
+          <img src="images/1.png" alt="Project 1" />
+          <a href="index.html" class="images">Portofolio</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="pembatas" />
+
+    <!-- CONTACT Section -->
+    <section id="contact" class="content">
+      <div class="intro-container" data-aos="fade-up">
+        <h1 class="h1">Contact Me</h1>
+      
+        <form action="https://formspree.io/f/mblkrlrv" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" autocomplete="off">
+          </label>
+          <label>
+            Your name:
+            <input type="text" name="name" autocomplete="off">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" autocomplete="off"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>@ 2025 Portfolio Lingkan.</p>
+    <p>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: false
+    });
+  </script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('toggle-mode');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
